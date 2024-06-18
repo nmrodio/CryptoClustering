@@ -1,6 +1,7 @@
-# CryptoClustering #
+# **CryptoClustering** #
 
------------
+------------------------------
+------------------------------
 
 ## **Project Goal:** ##
 * This project aims to leverage K-means clustering to group cryptocurrencies based on their price change characteristics. By analyzing historical data and employing dimensionality reduction techniques, the project seeks to identify meaningful clusters that can potentially enhance market understanding and inform investment strategies using both the original scaled dataset and then applying PCA to reduce the dimensions of the original scaled dataset to compare the two models and the clusters that were produced from each technique.
@@ -25,8 +26,8 @@
 
 **2.4) Create Scatter Plot to show cluster results:** Plotting the predicted clusters into a scatter plot and coloring the data points based on cluster labels (0,1,2,3)
 
-
-----------
+------------------------------
+------------------------------
 
 ## **Elbow Curve - Original Scaled Data** ##
 
@@ -44,12 +45,12 @@
 
 ![Screenshot 2024-06-18 124212](https://github.com/nmrodio/CryptoClustering/assets/157527614/e3a5610e-0135-4778-9807-e3bc41a22121)
 
-
---------------------------
+------------------------------
+------------------------------
 
 ## **How does the code work?** ##
 
-#### **Model 1: K-Means Clustering with Original Scaled Data**
+### **Model 1: K-Means Clustering with Original Scaled Data**
 
 * **Data Preprocessing:**
 
@@ -69,7 +70,7 @@
 
 **3)** Visualize the clusters using hvPlot, highlighting data points with their corresponding cryptocurrency IDs for easy identification.
 
-#### **Model 2: K-Means Clustering with PCA Scaled Data**
+### **Model 2: K-Means Clustering with PCA Scaled Data**
 
 * **Dimensionality Reduction with Principal Component Analysis (PCA):**
 
@@ -89,6 +90,9 @@
 
 **2)** Group cryptocurrencies based on their principal components and visualize the resulting clusters using hvPlot.
 
-* **Analysis of Dimensionality Reduction Impact:**
+------------------------------
+------------------------------
+
+## **Analysis of PCA/Dimensionality Reduction Impact:** ##
 
 After analyzing the cluster results for the original scaled data vs the PCA data, the impact of using fewer features to cluster the data using K-Means seems to be a little bit better after applying PCA and using the PCA data. Although the original scaled data scatter plot shows clusters that seem to be more seperated, the PCA data scatter plot did a great job of seperating the two outliers into seperate groups while still keeping the two "like" groups together while keeping 89.5% of the variance/'information' from the original dataset. Its still important to keep in mind that the model became less accurate using the PCA data compared to the entire original scaled dataset because we lost around 10.5% of the variance/"information" to cut down on features/dimensions and create more "appealing" clusters.
